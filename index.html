@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="nimbus-interact"></div>
+    <script>
+        let interval = setInterval(() => {
+            if (window.Nimbus && window.Nimbus.isLoaded) {
+                window.Nimbus.Interact({
+                    widgetKey: "5c090ae7e62c40d791c08f54f7a0bcfa",
+                    contactId: "246e0fb9-a001-4a2e-8593-8c56427eb6a3",
+                    presenceSubscription: "signalR"
+                });
+                clearInterval(interval);
+            }
+        }, 100);
+    </script>
+    <script id="nimbus-bootstrap" src="https://interact.innovator.luware.cloud/static/js/bootstrap.js"
+        publicurl="https://interact.innovator.luware.cloud"></script>
+</body>
+
+</html>
